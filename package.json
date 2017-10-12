@@ -1,0 +1,33 @@
+{
+  "name": "orange_biscuit",
+  "version": "1.0.0",
+  "description": "Orange flavoured biscuit.",
+  "main": "app.js",
+  "scripts": {
+    "watch": "webpack --progress --watch",
+    "build": "node_modules/.bin/webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ganesh Khade",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.6.0",
+    "webpack-bundle-tracker": "^0.2.0",
+    "webpack-dev-server": "^2.9.1",
+    "webpack-split-by-path": "^2.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "4.0.0-beta",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.5"
+  }
+}
