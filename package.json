@@ -1,7 +1,7 @@
 {
-  "name": "orange_biscuit",
+  "name": "django_webpack_starter",
   "version": "1.0.0",
-  "description": "Orange flavoured biscuit.",
+  "description": "Django webpack starter.",
   "main": "app.js",
   "scripts": {
     "watch": "webpack --progress --watch",
