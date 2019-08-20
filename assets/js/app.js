@@ -1,1 +1,1 @@
-require('./bootstrap');
+import '../scss/app.scss'

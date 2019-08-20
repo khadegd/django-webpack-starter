@@ -1,11 +1,12 @@
 {% load render_bundle from webpack_loader %}
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
     <title>Example</title>
   </head>
-    {% render_bundle 'main' 'css' %}
+    {% render_bundle 'app' 'css' %}
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -32,6 +33,6 @@
         </div>
     </nav>
     {% render_bundle 'vendor' 'js' %}
-    {% render_bundle 'main' 'js' %}
+    {% render_bundle 'app' 'js' %}
   </body>
 </html>

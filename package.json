@@ -5,25 +5,31 @@
   "main": "app.js",
   "scripts": {
     "watch": "webpack --progress --watch",
-    "build": "node_modules/.bin/webpack --config webpack.config.js",
+    "build": "./node_modules/.bin/webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ganesh Khade",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.26.0",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
     "babel-loader": "^8.0.6",
-    "babel-preset-env": "^1.6.0",
+    "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
-    "extract-text-webpack-plugin": "^3.0.1",
-    "node-sass": "^4.5.3",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "sass-loader": "^7.2.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.2",
     "webpack-bundle-tracker": "^0.4.2-beta",
+    "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0",
-    "webpack-split-by-path": "^2.0.0"
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "bootstrap": "4.3.1",
