@@ -135,6 +135,8 @@ STATICFILES_DIRS = [
 WEBPACK_LOADER = {
     'DEFAULT': {
         'BUNDLE_DIR_NAME': 'dist/',
+        'POLL_INTERVAL': 0.1,
+        'TIMEOUT': None,
         'STATS_FILE': os.path.join(BASE_DIR, 'assets/dist/webpack.dev.json')
     }
 }

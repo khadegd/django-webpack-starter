@@ -4,8 +4,9 @@
   "description": "Django webpack starter.",
   "main": "app.js",
   "scripts": {
-    "watch": "webpack --progress --watch",
-    "build": "./node_modules/.bin/webpack --config webpack.prod.js",
+    // TODO: "start": "./node_modules/.bin/webpack-dev-server --config webpack.dev.js",
+    "dev": "./node_modules/.bin/webpack --config webpack.dev.js --watch --progress",
+    "prod": "./node_modules/.bin/webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ganesh Khade",
