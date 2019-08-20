@@ -1,10 +1,10 @@
 # Django Webpack Starter
 
-Use Django 2.2.* & Webpack 4.39.* with Bootstrap4 seamlessly.
+Use Python 3.7.*, Django 2.2.* & Webpack 4.39.* with Bootstrap4 seamlessly.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Clone the repo.
 
 ### Prerequisites
 
@@ -16,18 +16,21 @@ Give examples
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Run the following commands.
 
 ```
-Give the example
+python -m venv .venv
+source .venv/bin/activate
+pip install pipenv
+pipenv install
+yarn
+yarn run dev
 ```
 
-And repeat
+For production
 
 ```
-until finished
+yarn run prod
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
