@@ -10,8 +10,8 @@ const BundleTracker = require('webpack-bundle-tracker');
 module.exports = merge(common, {
   mode: "production",
   output: {
-    filename: "[name].[contentHash].bundle.js",
-    path: path.resolve(__dirname, "./assets/dist/")
+    filename: "[name].[contentHash].js",
+    path: path.resolve(__dirname, "./assets/bundles/")
   },
   optimization: {
     minimizer: [
@@ -22,7 +22,7 @@ module.exports = merge(common, {
   plugins: [
     new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" }),
     new CleanWebpackPlugin(),
-    new BundleTracker({path: __dirname, filename: './assets/dist/webpack-stats.json'})
+    new BundleTracker({path: __dirname, filename: './assets/bundles/webpack.prod.json'})
   ],
   module: {
     rules: [

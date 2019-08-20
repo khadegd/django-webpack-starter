@@ -1,6 +1,6 @@
 # Django Webpack Starter
 
-One Paragraph of project description goes here
+Use Django 2.2.* & Webpack 4.39.* with Bootstrap4 seamlessly.
 
 ## Getting Started
 

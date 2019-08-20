@@ -127,6 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'assets'),
 ]
@@ -134,8 +135,15 @@ STATICFILES_DIRS = [
 WEBPACK_LOADER = {
     'DEFAULT': {
         'BUNDLE_DIR_NAME': 'dist/',
-        'STATS_FILE': os.path.join(BASE_DIR, 'assets/dist/webpack-stats.json')
+        'STATS_FILE': os.path.join(BASE_DIR, 'assets/dist/webpack.dev.json')
     }
 }
+
+if not DEBUG:
+    WEBPACK_LOADER.update({
+        'CACHE': not DEBUG,
+        'BUNDLE_DIR_NAME': 'bundles/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'assets/bundles/webpack.prod.json'),
+    })
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
