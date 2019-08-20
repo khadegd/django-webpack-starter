@@ -25,7 +25,11 @@ SECRET_KEY = 'l+wx3px--9-2lh1y1mrxebe7-&gxwm@!()t$1321gt=b@#ftjy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '::1'
+]
 
 
 # Application definition
@@ -38,7 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'webpack_loader.apps.WebpackLoaderConfig'
+    'webpack_loader',
+    'crispy_forms',
+    'django_extensions'
+
 ]
 
 MIDDLEWARE = [
@@ -107,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -130,3 +137,5 @@ WEBPACK_LOADER = {
         'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json')
     }
 }
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
