@@ -44,20 +44,19 @@ yarn run prod
 python manage.py runserver_plus 0.0.0.0:8000 --insecure
 ```
 
+## Thanks
+
+* Colt Steele - [Webpack Course YouTube](https://www.youtube.com/playlist?list=PLblA84xge2_zwxh3XJqy6UVxS60YdusY8)
+* Chi Shang Cheng - [Integrating webpack-dev-server with Django](https://cscheng.info/2016/08/03/integrating-webpack-dev-server-with-django.html)
 
 
 ## Authors
 
-* **Ganesh Khade** - [khadegd](https://twitter.com/khadegd)
+* **Ganesh Khade** - Twitter - [@khadegd](https://twitter.com/khadegd)
 
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
