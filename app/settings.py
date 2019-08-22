@@ -26,9 +26,7 @@ SECRET_KEY = ')u)=q2gh%++e1!h(q5*+sa^nn8ygszg=dqfr7a!0ogzleh=i6k'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    '::1'
+    'localhost'
 ]
 
 
@@ -134,18 +132,24 @@ STATICFILES_DIRS = [
 
 WEBPACK_LOADER = {
     'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'dist/',
+        'BUNDLE_DIR_NAME': 'bundles/',
         'POLL_INTERVAL': 0.1,
         'TIMEOUT': None,
-        'STATS_FILE': os.path.join(BASE_DIR, 'assets/dist/webpack.dev.json')
+        'STATS_FILE': os.path.join(BASE_DIR, 'assets/bundles/dev/stats.json')
     }
+}
+
+WEBPACK_DEV_SERVER = True
+
+WEBPACK_DEV_SERVER_CONFIG = {
+    'ADDRESS': 'http://localhost:8080/assets/bundles/dev'
 }
 
 if not DEBUG:
     WEBPACK_LOADER.update({
         'CACHE': not DEBUG,
         'BUNDLE_DIR_NAME': 'bundles/',
-        'STATS_FILE': os.path.join(BASE_DIR, 'assets/bundles/webpack.prod.json'),
+        'STATS_FILE': os.path.join(BASE_DIR, 'assets/bundles/stats.json'),
     })
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

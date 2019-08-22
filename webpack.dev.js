@@ -9,12 +9,12 @@ module.exports = merge(common, {
   mode: "development",
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "./assets/dist")
+    path: path.resolve(__dirname, "./assets/bundles/dev")
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: "[name].css" }),
+    new MiniCssExtractPlugin({ filename: "[name].bundle.css" }),
     new CleanWebpackPlugin(),
-    new BundleTracker({path: __dirname, filename: './assets/dist/webpack.dev.json'})
+    new BundleTracker({path: __dirname, filename: './assets/bundles/dev/stats.json'})
   ],
   module: {
     rules: [
@@ -27,5 +27,10 @@ module.exports = merge(common, {
         ]
       }
     ]
+  },
+  devServer: {
+    hot: true,
+    compress: true,
+    publicPath: '/assets/bundles/dev/'
   },
 });

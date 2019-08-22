@@ -5,8 +5,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Example</title>
-  </head>
     {% render_bundle 'app' 'css' %}
+  </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -32,7 +32,12 @@
             </form>
         </div>
     </nav>
-    {% render_bundle 'vendor' 'js' %}
-    {% render_bundle 'app' 'js' %}
+    {% if settings.DEBUG and settings.WEBPACK_DEV_SERVER %}
+        <script src="{{ settings.WEBPACK_DEV_SERVER_CONFIG.ADDRESS }}/vendor.bundle.js"></script>
+        <script src="{{ settings.WEBPACK_DEV_SERVER_CONFIG.ADDRESS }}/app.bundle.js"></script>
+    {% else %}
+        {% render_bundle 'vendor' 'js' %}
+        {% render_bundle 'app' 'js' %}
+    {% endif %}
   </body>
 </html>

@@ -22,7 +22,7 @@ module.exports = merge(common, {
   plugins: [
     new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" }),
     new CleanWebpackPlugin(),
-    new BundleTracker({path: __dirname, filename: './assets/bundles/webpack.prod.json'})
+    new BundleTracker({path: __dirname, filename: './assets/bundles/stats.json'})
   ],
   module: {
     rules: [
