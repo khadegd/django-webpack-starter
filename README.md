@@ -26,14 +26,15 @@ yarn
 
 ### Hot reload:
 ```
+Update setting.py -> WEBPACK_LIVE_SERVER = True
 yarn start
 python manage.py runserver_plus 0.0.0.0:8000
 ```
 
 
-### Development mode:
+### One off development build:
 ```
-yarn run dev
+yarn run build-dev
 python manage.py runserver_plus 0.0.0.0:8000
 ```
 
@@ -41,7 +42,8 @@ python manage.py runserver_plus 0.0.0.0:8000
 ### Production mode:
 
 ```
-yarn run prod
+DEBUG = True
+yarn run build-prod
 python manage.py runserver_plus 0.0.0.0:8000 --insecure
 ```
 
