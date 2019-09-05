@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --config webpack.dev.js --progress",
-    "dev": "./node_modules/.bin/webpack --config webpack.dev.js --watch --progress",
-    "prod": "./node_modules/.bin/webpack --config webpack.prod.js",
+    "build-dev": "./node_modules/.bin/webpack --config webpack.dev.js --progress",
+    "build-prod": "./node_modules/.bin/webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ganesh Khade",

@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = ')u)=q2gh%++e1!h(q5*+sa^nn8ygszg=dqfr7a!0ogzleh=i6k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -133,19 +133,18 @@ STATICFILES_DIRS = [
 
 WEBPACK_LOADER = {
     'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'bundles/',
+        'BUNDLE_DIR_NAME': 'bundles/dev/',
         'POLL_INTERVAL': 0.1,
         'TIMEOUT': None,
         'STATS_FILE': os.path.join(BASE_DIR, 'assets/bundles/dev/stats.json')
     }
 }
 
-WEBPACK_DEV_SERVER = False
+# Live reload server setting
+WEBPACK_LIVE_SERVER = False
 
-if DEBUG:
-    WEBPACK_DEV_SERVER = True
-
-    WEBPACK_DEV_SERVER_CONFIG = {
+if DEBUG and WEBPACK_LIVE_SERVER:
+    WEBPACK_LIVE_SERVER_CONFIG = {
         'ADDRESS': 'http://localhost:8080/assets/bundles/dev'
     }
 

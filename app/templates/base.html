@@ -32,9 +32,9 @@
             </form>
         </div>
     </nav>
-    {% if settings.DEBUG and settings.WEBPACK_DEV_SERVER %}
-        <script src="{{ settings.WEBPACK_DEV_SERVER_CONFIG.ADDRESS }}/vendor.bundle.js"></script>
-        <script src="{{ settings.WEBPACK_DEV_SERVER_CONFIG.ADDRESS }}/app.bundle.js"></script>
+    {% if settings.DEBUG and settings.WEBPACK_LIVE_SERVER %}
+        <script src="{{ settings.WEBPACK_LIVE_SERVER_CONFIG.ADDRESS }}/vendor.bundle.js"></script>
+        <script src="{{ settings.WEBPACK_LIVE_SERVER_CONFIG.ADDRESS }}/app.bundle.js"></script>
     {% else %}
         {% render_bundle 'vendor' 'js' %}
         {% render_bundle 'app' 'js' %}
