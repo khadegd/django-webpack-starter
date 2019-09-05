@@ -1,91 +1,63 @@
 # Django Webpack Starter
 
-Use Python 3.7.*, Django 2.2.* & Webpack 4.39.* with Bootstrap4 seamlessly.
-
-## Getting Started
-
-Clone the repo.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
+Hello fellow human. The repo uses
 ```
-Give examples
+Python 3.7.*
+Django 2.2.*
+Webpack 4.39.*
+Bootstrap 4.3.*
+Pipenv
 ```
+If you have any questions tweet me [@khadegd](https://twitter.com/khadegd).
 
-### Installing
+## Installing
 
 Run the following commands.
 
 ```
-python -m venv .venv
+git clone git@github.com:khadegd/django-webpack-starter.git demo
+python3 -m venv .venv
 source .venv/bin/activate
 pip install pipenv
 pipenv install
 yarn
-yarn run dev
 ```
 
-For production
+
+### Hot reload:
+```
+yarn start
+python manage.py runserver_plus 0.0.0.0:8000
+```
+
+
+### Development mode:
+```
+yarn run dev
+python manage.py runserver_plus 0.0.0.0:8000
+```
+
+
+### Production mode:
 
 ```
 yarn run prod
+python manage.py runserver_plus 0.0.0.0:8000 --insecure
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+## Thanks
 
-## Running the tests
+* Colt Steele - [Webpack Course YouTube](https://www.youtube.com/playlist?list=PLblA84xge2_zwxh3XJqy6UVxS60YdusY8)
+* Chi Shang Cheng - [Integrating webpack-dev-server with Django](https://cscheng.info/2016/08/03/integrating-webpack-dev-server-with-django.html)
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Ganesh Khade** - Twitter - [@khadegd](https://twitter.com/khadegd)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
