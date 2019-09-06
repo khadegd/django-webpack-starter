@@ -20,14 +20,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ')u)=q2gh%++e1!h(q5*+sa^nn8ygszg=dqfr7a!0ogzleh=i6k'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', False)
 
 ALLOWED_HOSTS = [
     'localhost',
-    '127.0.0.1'
+    '127.0.0.1',
+    '::1'
 ]
 
 
@@ -70,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'app.context_processors.global_settings',
             ],
         },
     },
@@ -141,7 +143,7 @@ WEBPACK_LOADER = {
 }
 
 # Live reload server setting
-WEBPACK_LIVE_SERVER = False
+WEBPACK_LIVE_SERVER = os.getenv('WEBPACK_LIVE_SERVER', False)
 
 if DEBUG and WEBPACK_LIVE_SERVER:
     WEBPACK_LIVE_SERVER_CONFIG = {
