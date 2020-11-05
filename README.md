@@ -2,10 +2,10 @@
 
 Hello fellow human. The repo uses
 ```
-Python 3.7.*
-Django 2.2.*
-Webpack 4.39.*
-Bootstrap 4.3.*
+Python 3.9.*
+Django 3.1.*
+Webpack 5.4.*
+Bootstrap 4.5.*
 Pipenv
 ```
 If you have any questions tweet me [@khadegd](https://twitter.com/khadegd).
