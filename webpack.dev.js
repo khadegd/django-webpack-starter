@@ -10,7 +10,7 @@ module.exports = merge(common, {
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "./assets/bundles/dev"),
-    publicPath: "/assets/bundles/dev/",
+    publicPath: "/static/dev/",
   },
   plugins: [
     new MiniCssExtractPlugin({ filename: "[name].bundle.css" }),
@@ -32,6 +32,6 @@ module.exports = merge(common, {
   devServer: {
     hot: true,
     compress: true,
-    publicPath: '/assets/bundles/dev/'
+    publicPath: '/static/dev/'
   },
 });

@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = ')u)=q2gh%++e1!h(q5*+sa^nn8ygszg=dqfr7a!0ogzleh=i6k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -125,10 +125,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/assets/'
+STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'assets'),
+    os.path.join(BASE_DIR, 'assets/bundles'),
 ]
 
 WEBPACK_LOADER = {
@@ -145,14 +147,14 @@ WEBPACK_LIVE_SERVER = False
 
 if DEBUG and WEBPACK_LIVE_SERVER:
     WEBPACK_LIVE_SERVER_CONFIG = {
-        'ADDRESS': 'http://localhost:8080/assets/bundles/dev'
+        'ADDRESS': 'http://localhost:8080/static/bundles/dev'
     }
 
 if not DEBUG:
     WEBPACK_LOADER.update({
         'DEFAULT': {
-            'BUNDLE_DIR_NAME': 'bundles/',
-            'STATS_FILE': os.path.join(BASE_DIR, 'assets/bundles/stats.json')
+            # 'BUNDLE_DIR_NAME': 'bundles/',
+            'STATS_FILE': os.path.join(BASE_DIR, 'staticfiles/stats.json')
         }
     })
 
