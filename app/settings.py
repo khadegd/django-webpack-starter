@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = ')u)=q2gh%++e1!h(q5*+sa^nn8ygszg=dqfr7a!0ogzleh=i6k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -130,7 +130,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'assets/bundles'),
+    os.path.join(BASE_DIR, 'assets/staticfiles'),
 ]
 
 WEBPACK_LOADER = {
@@ -154,7 +154,7 @@ if not DEBUG:
     WEBPACK_LOADER.update({
         'DEFAULT': {
             # 'BUNDLE_DIR_NAME': 'bundles/',
-            'STATS_FILE': os.path.join(BASE_DIR, 'staticfiles/stats.json')
+            'STATS_FILE': os.path.join(BASE_DIR, 'staticfiles/bundles/stats.json')
         }
     })
 
