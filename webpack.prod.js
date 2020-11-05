@@ -1,6 +1,6 @@
 const path = require("path");
 const common = require("./webpack.common");
-const merge = require("webpack-merge");
+const { merge }= require("webpack-merge");
 const { CleanWebpackPlugin }= require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -10,8 +10,9 @@ const BundleTracker = require('webpack-bundle-tracker');
 module.exports = merge(common, {
   mode: "production",
   output: {
-    filename: "[name].[contentHash].js",
-    path: path.resolve(__dirname, "./assets/bundles/")
+    filename: "[name].[contenthash].js",
+    path: path.resolve(__dirname, "./assets/bundles/"),
+    publicPath: "/assets/bundles/",
   },
   optimization: {
     minimizer: [
@@ -20,7 +21,7 @@ module.exports = merge(common, {
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" }),
+    new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
     new CleanWebpackPlugin(),
     new BundleTracker({path: __dirname, filename: './assets/bundles/stats.json'})
   ],

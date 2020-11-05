@@ -1,6 +1,6 @@
 const path = require("path");
 const common = require("./webpack.common");
-const merge = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const { CleanWebpackPlugin }= require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const BundleTracker = require('webpack-bundle-tracker');
@@ -9,7 +9,8 @@ module.exports = merge(common, {
   mode: "development",
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "./assets/bundles/dev")
+    path: path.resolve(__dirname, "./assets/bundles/dev"),
+    publicPath: "/assets/bundles/dev/",
   },
   plugins: [
     new MiniCssExtractPlugin({ filename: "[name].bundle.css" }),
