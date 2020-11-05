@@ -29,7 +29,7 @@
     "popper.js": "^1.16.1"
   },
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --config webpack.dev.js --progress",
+    "start": "./node_modules/.bin/webpack serve --config webpack.dev.js --progress",
     "build-dev": "./node_modules/.bin/webpack --config webpack.dev.js --progress",
     "build-prod": "./node_modules/.bin/webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"

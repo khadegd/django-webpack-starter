@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = ')u)=q2gh%++e1!h(q5*+sa^nn8ygszg=dqfr7a!0ogzleh=i6k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -147,7 +147,7 @@ WEBPACK_LIVE_SERVER = False
 
 if DEBUG and WEBPACK_LIVE_SERVER:
     WEBPACK_LIVE_SERVER_CONFIG = {
-        'ADDRESS': 'http://localhost:8080/static/bundles/dev'
+        'ADDRESS': 'http://localhost:8080/static/dev'
     }
 
 if not DEBUG:

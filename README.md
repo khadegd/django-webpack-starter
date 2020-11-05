@@ -44,6 +44,7 @@ python manage.py runserver_plus 0.0.0.0:8000
 ```
 DEBUG = True
 yarn run build-prod
+python manage.py collectstatic
 python manage.py runserver_plus 0.0.0.0:8000 --insecure
 ```
 
